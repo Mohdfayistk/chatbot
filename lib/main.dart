@@ -23,6 +23,7 @@ class MyApp extends StatelessWidget {
           return BlocProvider(
             create: (context) => ChatbotBloc(),
             child: MaterialApp(
+              debugShowCheckedModeBanner: false,
                 title: 'Flutter Demo',
                 theme: ThemeData(
                   // This is the theme of your application.

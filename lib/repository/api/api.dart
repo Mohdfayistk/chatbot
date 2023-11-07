@@ -8,12 +8,12 @@ import 'api_client.dart';
 class AnimeApi {
   ApiClient apiClient = ApiClient();
 
-  Future<Chatbot> getAnime(String text) async {
+  Future<Boat> getAnime(String text) async {
     String trendingpath = 'https://ai-chatbot.p.rapidapi.com/chat/free?message=$text&uid=user1';
     var body = {
     };
     Response response = await apiClient.invokeAPI(trendingpath, 'GET', body);
 
-    return Chatbot.fromJson(jsonDecode(response.body));
+    return Boat.fromJson(jsonDecode(response.body));
   }
 }
